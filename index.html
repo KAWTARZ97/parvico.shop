@@ -3,72 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PARVICO – Développement & Solutions Informatiques</title>
+<title>ONINO.JS – Développement & Solutions Numériques</title>
 
 <style>
-    body {margin:0;font-family:Arial, sans-serif;background:#0e0e0e;color:white;}
-    header {padding:80px 20px;text-align:center;background:linear-gradient(135deg,#2a2a2a,#000);}
-    header h1 {font-size:48px; animation: fadeIn 2s ease;}
-    header p {font-size:20px;color:#ccc;}
+    body {margin:0;font-family:"Montserrat", Arial, sans-serif;background:#0a0a0a;color:white;}
+    header {padding:90px 20px;text-align:center;background:linear-gradient(135deg,#1a1a1a,#000);}
+    header h1 {font-size:60px;letter-spacing:3px;font-weight:800;animation: fadeIn 2s ease;}
+    header p {font-size:22px;color:#ccc;margin-top:10px;}
 
-    /* HERO IMAGE */
+    /* HERO */
     .hero {
-        height:400px;
+        height:430px;border-bottom:4px solid #31a8ff;
         background:url("https://avatars.mds.yandex.net/i?id=6621335d86a2c9de95bbe4bfc85d97ff3d747ee9-4117155-images-thumbs&n=13")
         center/cover no-repeat;
-        animation: zoomHero 12s infinite alternate ease-in-out;
+        animation: heroZoom 13s infinite alternate ease-in-out;
     }
 
-    /* SECTIONS */
-    section {padding:60px 30px;max-width:1100px;margin:auto;}
+    section {padding:70px 30px;max-width:1150px;margin:auto;}
 
-    h2 {font-size:35px;margin-bottom:20px;position:relative;}
+    h2 {font-size:38px;margin-bottom:20px;position:relative;font-weight:700;}
     h2::after {
-        content:""; position:absolute; bottom:-10px; left:0; width:80px; height:4px;
-        background:#31a8ff; border-radius:4px; animation: slideBar 2s infinite alternate;
+        content:"";position:absolute;bottom:-10px;left:0;width:90px;height:4px;
+        background:#31a8ff;border-radius:4px;animation: barAnim 2.5s infinite alternate;
     }
 
-    /* SERVICES CARDS */
-    .cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+    /* PARAGRAPH */
+    p {line-height:1.7;font-size:18px;color:#ddd;}
+
+    /* CARDS */
+    .cards {
+        display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;
+    }
     .card {
-        background:#1b1b1b;padding:25px;border-radius:12px;box-shadow:0 0 15px #0006;
-        transition:transform .4s, box-shadow .4s;
+        background:#131313;padding:25px;border-radius:15px;
+        box-shadow:0 0 18px #0007;transition:.4s;overflow:hidden;position:relative;
     }
     .card:hover {
-        transform:translateY(-8px);box-shadow:0 0 25px #31a8ff;
+        transform:translateY(-10px);box-shadow:0 0 25px #31a8ff;cursor:pointer;
     }
 
-    /* CONTACT */
+    .card img {
+        width:100%;border-radius:10px;margin-bottom:15px;
+        transition:transform .6s;
+    }
+    .card:hover img {transform:scale(1.1) rotate(-1deg);}
+
+    /* CONTACT BOX */
     .contact-box {
-        background:#111;padding:30px;border-radius:15px;border:1px solid #333;text-align:center;
-        box-shadow:0 0 20px #000;
+        background:#111;padding:35px;border-radius:18px;
+        border:1px solid #333;text-align:center;
+        box-shadow:0 0 25px #000;
     }
+    .contact-box p strong {color:#31a8ff;}
 
-    /* FOOTER */
-    footer {padding:30px;text-align:center;background:#000;color:#777;}
+    footer {
+        padding:35px;text-align:center;background:#000;color:#666;font-size:15px;
+        margin-top:60px;
+    }
 
     /* ANIMATIONS */
-    @keyframes fadeIn {from{opacity:0;transform:translateY(-20px);}to{opacity:1;}}
-    @keyframes zoomHero {from{transform:scale(1);}to{transform:scale(1.15);}}
-    @keyframes slideBar {from{width:40px;}to{width:120px;}}
+    @keyframes fadeIn {from{opacity:0;transform:translateY(-30px);}to{opacity:1;}}
+    @keyframes heroZoom {from{transform:scale(1);}to{transform:scale(1.17);}}
+    @keyframes barAnim {from{width:50px;}to{width:140px;}}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>PARVICO</h1>
-    <p>Solutions informatiques • Développement sur mesure • Services numériques avancés</p>
+    <h1>ONINO.JS</h1>
+    <p>Développement numérique • Ingénierie logicielle • Solutions innovantes</p>
 </header>
 
 <div class="hero"></div>
 
 <section>
-    <h2>À propos de nous</h2>
+    <h2>Qui sommes-nous ?</h2>
     <p>
-        PARVICO est une entreprise spécialisée dans le développement informatique, la programmation
-        sur mesure, la création d’outils digitaux et l’automatisation des systèmes pour les entreprises.
-        Grâce à notre expertise technique, nous concevons des solutions innovantes adaptées aux besoins de chaque client.
+        ONINO.JS est une entreprise spécialisée dans le développement informatique, la création de solutions
+        digitales sur mesure, l’automatisation et la programmation avancée. Nous accompagnons les entreprises
+        dans leurs projets numériques en offrant des services hautement techniques, modernes et fiables.
     </p>
 </section>
 
@@ -77,21 +92,21 @@
     <div class="cards">
 
         <div class="card">
-            <img src="https://info.audiokinetic.com/hubfs/Blog_Images/Wwise%20Authoring%20Plug-ins%20for%2021.1,%20Part%201%20History%20and%20Goals/christopher-gower-m_HRfLhgABo-unsplash.jpg" style="width:100%;border-radius:10px;">
-            <h3>Développement Logiciel</h3>
-            <p>Applications sur mesure, outils d’automatisation, solutions métier et systèmes avancés.</p>
+            <img src="https://info.audiokinetic.com/hubfs/Blog_Images/Wwise%20Authoring%20Plug-ins%20for%2021.1,%20Part%201%20History%20and%20Goals/christopher-gower-m_HRfLhgABo-unsplash.jpg">
+            <h3>Développement sur mesure</h3>
+            <p>Applications métiers, outils internes, logiciels personnalisés et solutions performantes.</p>
         </div>
 
         <div class="card">
-            <img src="https://avatars.mds.yandex.net/i?id=617b04c11d1dd80aadb50938807c19f5ccab861c-13101529-images-thumbs&n=13" style="width:100%;border-radius:10px;">
-            <h3>Informatique Professionnelle</h3>
-            <p>Développement, intégration, optimisation et modernisation d’infrastructures digitales.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=617b04c11d1dd80aadb50938807c19f5ccab861c-13101529-images-thumbs&n=13">
+            <h3>Informatique & Systèmes</h3>
+            <p>Intégration, optimisation, maintenance et architecture technique professionnelle.</p>
         </div>
 
         <div class="card">
-            <img src="https://avatars.mds.yandex.net/i?id=0e8aa024c9d56f90f1a2a1048bd0d7187f05f5a7-4523975-images-thumbs&n=13" style="width:100%;border-radius:10px;">
-            <h3>Conseil & Expertise</h3>
-            <p>Audit technique, conseils stratégiques, accompagnement et transformation numérique.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=0e8aa024c9d56f90f1a2a1048bd0d7187f05f5a7-4523975-images-thumbs&n=13">
+            <h3>Consulting & Expertise</h3>
+            <p>Audit, stratégie digitale, transformation informatique et accompagnement personnalisé.</p>
         </div>
 
     </div>
@@ -102,12 +117,13 @@
     <div class="contact-box">
         <p><strong>Email :</strong> admin@parvico.shop</p>
         <p><strong>Téléphone :</strong> +33 7 80 86 55 09</p>
+        <p><strong>Entreprise :</strong> ONINO.JS</p>
         <p><strong>Adresse :</strong> 10 PRO MONA LISA, 78000 VERSAILLES, Île-de-France, France</p>
     </div>
 </section>
 
 <footer>
-    © 2025 PARVICO – Tous droits réservés
+    © 2025 ONINO.JS – Tous droits réservés
 </footer>
 
 </body>
